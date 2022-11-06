@@ -31,8 +31,8 @@ function renderPokemons(arr, regex=""){
         elClonePokemonTemp.querySelector(".js-pokemon-id").textContent = item.id;
 
         if(regex.source != "(?:)" && regex){
-            elClonePokemonTemp.querySelector(".js-pokemon-name").innerHTML = item.name.replace(regex, 
-                `Name: <mark class="bg-danger">${regex.source.toLowerCase()}</mark>`
+            elClonePokemonTemp.querySelector(".js-pokemon-name").innerHTML ="Name: " + item.name.replace(regex, 
+                `<mark class="bg-danger">${regex.source.toLowerCase()}</mark>`
             );
         }
         else{
