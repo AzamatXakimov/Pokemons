@@ -1,0 +1,114 @@
+/* ROOT */
+:root{
+    /* --main-font-family: "Roboto", "Arial", sans-serif; */
+    /* --main-font-weight: 400; */
+    --main-body-bg-color: #444444;
+    /* --main-text-color: #333; */
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+img{
+    display: block;
+    height: auto;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    /* font-family: var(--main-font-family); */
+    /* font-weight: var(--main-font-weight); */
+    background-color: var(--main-body-bg-color);
+}
+
+.wrapper{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 20;
+    background-color: #141414;
+    box-shadow: 0 0 30px rgb(0 0 0 / 80%);
+}
+
+.site-main{
+    flex-grow: 1;
+}
+
+.favorites-btn{
+    position: fixed;
+    top: 50px;
+    right: calc(50% - 740px);
+    width: 60px;
+    height: 60px;
+    background-color: #c83737;
+    background-image: url("../images/bookmark.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+.favorites-btn:focus{
+    box-shadow: 0 0 0 0.25rem rgb(220 53 69 / 80%);
+}
+
+.box-bg{
+    background-color: #1f1f1f;
+}
+
+.box-bg:focus{
+    background-color: #1f1f1f;
+    box-shadow: 0 0 0 0.25rem rgb(220 53 69 / 80%);
+}
+.box-bg::placeholder{
+    color: #fff;
+}
+
+.weakness-select{
+    background-image: url("../images/arrow-to-bottom.svg");
+}
+
+.pokemon-item{
+    background-color: #1f1f1f;
+}
+
+.pokemon-bookmark-star{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+    background-image: url("../images/white-star.svg");
+    background-size: cover;
+    background-position: center;
+}
+.pokemon-bookmark-star-delete{
+    background-image: url("../images/X.svg");
+}
+
+.is-favorite{
+    background-image: url("../images/yellow-star.svg");
+}
+
+.pokemon-name{
+    text-transform: capitalize;
+}
+
+.favorites-bg{
+    background-color: #141414;
+}
+
+.favorites-close{
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/X.svg");
+    background-size: cover;
+}
+.favorites-close:focus{
+    box-shadow: 0 0 0 0.25rem rgb(220 53 69 / 80%);
+}
