@@ -1,3 +1,6 @@
+AOS.init();
+
+
 // FORM 
 const elSearchForm = document.querySelector(".js-hero-search-form");
 const elSearchName = elSearchForm.querySelector(".js-search");
@@ -79,15 +82,15 @@ function rederFavorutesPokemons(){
 };
 
 function addWeaknesses(){
-    const arr = [];
+    const weeknessesSet = new Set();
 
     pokemons.forEach(item => {
         item.weaknesses.forEach(element => {
-            if(!arr.includes(element)){
-                arr.push(element)
-            };
+            weeknessesSet.add(element)
         });
     });
+
+    const arr =  Array.from(weeknessesSet)
 
     arr.sort((a,b) => a.toLowerCase().charCodeAt(0) - b.toLowerCase().charCodeAt(0))
 
